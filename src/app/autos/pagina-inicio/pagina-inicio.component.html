@@ -1,0 +1,33 @@
+<h1>Listado de Autos</h1>
+
+<div class="row">
+  <div class="col">
+    <app-listado-autos [autos]="autoss"></app-listado-autos>
+  </div>
+  <div class="col">
+    <h3>Agregar</h3>
+    <hr>
+    <form (submit)="agregar()">
+      <input
+            type="text"
+            placeholder="Marca"
+            name="marca"
+            [(ngModel)]="nuevoAuto.marca">
+
+      <input
+            type="text"
+            placeholder="Modelo"
+            name="modelo"
+            [(ngModel)] = "nuevoAuto.modelo">
+
+      <input
+          type="number"
+          placeholder="Precio"
+          name="precio"
+          [(ngModel)] = "nuevoAuto.precio">
+
+
+      <button type="submit">Agregar</button>
+    </form>
+  </div>
+</div>
